@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "tcs-macro-pulse"
@@ -33,6 +33,10 @@ Homepage    = "https://github.com/TCS-PLATFORM-OFFICIAL/tcs-macro-pulse"
 Repository  = "https://github.com/TCS-PLATFORM-OFFICIAL/tcs-macro-pulse"
 "Bug Tracker" = "https://github.com/TCS-PLATFORM-OFFICIAL/tcs-macro-pulse/issues"
 "Live Demo"   = "https://tcs-platform-rust.vercel.app"
+
+[tool.setuptools.packages.find]
+include = ["tcs_macro_pulse*"]
+exclude = ["examples*", "tests*", "dist_test*"]
 
 [tool.ruff]
 line-length = 100
